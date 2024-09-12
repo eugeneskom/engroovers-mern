@@ -1,0 +1,12 @@
+{
+  "name": "engroovers",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node server/index.js",
+    "build": "npm run clean && npm run build:client && npm run build:server",
+    "clean": "rm -rf client/node_modules server/node_modules",
+    "build:client": "cd client && npm ci && npm run build",
+    "build:server": "cd server && npm ci"
+  }
+}
